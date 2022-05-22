@@ -1,6 +1,7 @@
 {
     "name": "react-utilitytable-website",
     "version": "0.1.0",
+    "homepage": "/React-Utility-Table",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.9.0",
