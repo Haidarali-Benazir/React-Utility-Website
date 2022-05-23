@@ -1,8 +1,6 @@
 import React from 'react'
-import { Grid, Typography } from '@mui/material';
+import {  Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LogoIcon from '../Icons/LogoIcon';
 export default function Header() {
     return (

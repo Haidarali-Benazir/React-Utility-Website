@@ -1,8 +1,6 @@
-import { Grid, Tab, Tabs, Typography } from '@mui/material';
+import { Grid, Tab, Tabs } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import SearchIcon from '@mui/icons-material/Search';
 import PropTypes from 'prop-types';
 import Header from './Components/Header';
 import Dashboard from './Mains/Dashboard';
@@ -13,22 +11,7 @@ import Styling from './Mains/Styling';
 import ExportExcel from './Mains/ExcelDownload';
 import Others from './Mains/Others';
 
-// import { makeStyles } from '@mui/styles';
 
-
-
-
-// const useStyles = makeStyles({
-//     root: {
-//         width: "100%",
-//         '& .Mui-selected': {
-//             fontWeight: "bold",
-//             color: "#fff !important",
-//             backgroundColor: "#1E5491",
-//             borderRadius: "20px"
-//         },
-//     },
-// });
 function TabPanel(props: any) {
 
   const { children, value, index, ...other } = props;
@@ -56,17 +39,17 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index: any) {
+// function a11yProps(index: any) {
 
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
+//   return {
+//     id: `simple-tab-${index}`,
+//     'aria-controls': `simple-tabpanel-${index}`,
+//   };
+// }
 const App = () => {
   // const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const [expanded, setExpanded] = React.useState(false);
+
 
 
   const handleChange = (event: any, newValue: any) => {
@@ -127,8 +110,8 @@ const App = () => {
 
       </Grid>
       <footer style={{ position: "fixed", width: "100%", }}>
-        <div style={{ padding: "5px 10px", textAlign: 'right' }}>Created by <a target={"_blank"} href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a>
-        and <a target={"_blank"} href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir</a></div>
+        <div style={{ padding: "5px 10px", textAlign: 'right' }}>Created by <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a>
+        and <a  href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir</a></div>
       </footer>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
 import theme from 'prism-react-renderer/themes/nightOwl';
 import { ReactUtilityTable } from 'react-utility-table';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';

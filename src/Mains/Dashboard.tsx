@@ -1,10 +1,9 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+
 import Install from './Install';
 
 const Dashboard = (props: any) => {
-  debugger
+
   return (
     <>
       <div>
