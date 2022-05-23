@@ -47,7 +47,7 @@ body ::-webkit-scrollbar {
 }
 
 .Mui-selected {
-    color: #000 !important;
+    color: #fff !important;
     background-color: #11bce7 !important;
     border-radius: 2rem !important;
 }
@@ -163,4 +163,10 @@ footer {
     bottom: 0px;
     background-color: #202020;
     color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    .installation .prism-code {
+        overflow-y: scroll;
+    }
 }

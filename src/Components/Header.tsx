@@ -16,7 +16,7 @@ export default function Header() {
             </div>
 
             <div style={{ display: "flex", gap: ".8rem" }}>
-                <GitHubIcon />
+                <a href="https://github.com/Haidarali-Benazir/react-utility-table"><GitHubIcon /></a>
                 {/* <LinkedInIcon />
                 <PowerSettingsNewIcon /> */}
             </div>

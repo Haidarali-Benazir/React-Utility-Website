@@ -15,12 +15,14 @@ export default function Edit() {
       const [tableData, setTableData] = React.useState([{
         "first_name": "Dmitri",
         "last_name": "Pickburn",
-        "email": "dpickburn0@google.fr"
+        "email": "dpickburn0@google.fr",
+        "credit": 2,
       },
       {
         "first_name": "Darelle",
         "last_name": "Whitlow",
-        "email": "dwhitlow1@tumblr.com"
+        "email": "dwhitlow1@tumblr.com",
+        "credit": 5,
       }]);
 
       return (
@@ -29,6 +31,7 @@ export default function Edit() {
             data={tableData} 
             columns={[
               { title: "Name", field: "first_name", editable: false },
+              {title: "Credit", field: "credit", type:"number"},
               {
                 title: "Last Name", field: "last_name",
                 render: (rowData) =>

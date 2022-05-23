@@ -10,6 +10,7 @@ import Selection from './Mains/Selection';
 import Styling from './Mains/Styling';
 import ExportExcel from './Mains/ExcelDownload';
 import Others from './Mains/Others';
+import ShowTotal from './Mains/ShowTotal';
 
 
 function TabPanel(props: any) {
@@ -75,6 +76,7 @@ const App = () => {
             <Tab label="Filter" />
             <Tab label="Selection" />
             <Tab label="Excel Download" />
+            <Tab label="Summary" />
             <Tab label="Other Feature" />
 
           </Tabs>
@@ -102,16 +104,18 @@ const App = () => {
           <TabPanel value={value} index={5}>
             <ExportExcel />
           </TabPanel>
-
           <TabPanel value={value} index={6}>
+            <ShowTotal />
+          </TabPanel>
+          <TabPanel value={value} index={7}>
             <Others />
           </TabPanel>
         </Grid>
 
       </Grid>
       <footer style={{ position: "fixed", width: "100%", }}>
-        <div style={{ padding: "5px 10px", textAlign: 'right' }}>Created by <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a>
-        and <a  href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir</a></div>
+        <div style={{ padding: "5px 10px", textAlign: 'right' }}>Created by <a  href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir </a>
+        and <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
       </footer>
     </div>
   );

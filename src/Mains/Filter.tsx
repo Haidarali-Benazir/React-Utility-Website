@@ -33,12 +33,13 @@ export default function Filter() {
                 data={tableData}  
                  columns={[
                   { title: "Name", field: "first_name" },
-                  {title: "Name", field: "last_name",filtering:false  },
-                  {title: "Name", field: "email", },
+                  {title: "Last Name", field: "last_name",filtering:false  },
+                  {title: "Email", field: "email", },
                 ]}
 
                 options={{
-                    filtering:true
+                    filtering:true,
+                    globalSearch:false,
                 }}
               />
             </div>

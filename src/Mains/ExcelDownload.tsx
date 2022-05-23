@@ -35,8 +35,8 @@ export default function ExportExcel() {
                 data={tableData} 
                 columns={[
                   { title: "Name", field: "first_name" },
-                  {title: "Name", field: "last_name",  },
-                  {title: "Name", field: "email", },
+                  {title: "Last Name", field: "last_name",  },
+                  {title: "Email", field: "email", },
                 ]}
                 options={{
                     exportButton:true ,
