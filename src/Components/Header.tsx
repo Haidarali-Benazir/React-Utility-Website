@@ -10,13 +10,13 @@ export default function Header() {
         }}>
             <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
                 <LogoIcon />
-              <a href="https://www.npmjs.com/package/react-utility-table" style={{textDecoration:"none"}}> <Typography variant="h5" gutterBottom component="div" style={{ margin: "0px", color:"#000",  }} >
+              <a target={'_blank'} href="https://www.npmjs.com/package/react-utility-table" style={{textDecoration:"none"}}> <Typography variant="h5" gutterBottom component="div" style={{ margin: "0px", color:"#000",  }} >
                     React Utility Table
                 </Typography></a> 
             </div>
 
             <div style={{ display: "flex", gap: ".8rem" }}>
-                <a href="https://github.com/Haidarali-Benazir/react-utility-table"><GitHubIcon /></a>
+                <a target={'_blank'} href="https://github.com/Haidarali-Benazir/react-utility-table"><GitHubIcon /></a>
                 {/* <LinkedInIcon />
                 <PowerSettingsNewIcon /> */}
             </div>

@@ -9,7 +9,8 @@ import theme from 'prism-react-renderer/themes/nightOwl'
 
 export default function Selection() {
   const scope = { ReactUtilityTable };
-  
+
+
   return (
     <>
 
@@ -18,29 +19,30 @@ export default function Selection() {
         //import React from 'react';
         //import { ReactUtilityTable } from 'react-utility-table';
         function demo() {
-        const [tableData, setTableData] = React.useState([{
-          "first_name": "Dmitri",
-          "last_name": "Pickburn",
-          "email": "dpickburn0@google.fr"
-        },
-        {
-          "first_name": "Darelle",
-          "last_name": "Whitlow",
-          "email": "dwhitlow1@tumblr.com"
-        }]);
-        return (
-          <div>
-            <ReactUtilityTable
-              data={tableData}   
-              columns={[
-                { title: "Name", field: "first_name" },
-                {title: "Last Name", field: "last_name",  },
-                {title: "Email", field: "email", },
-              ]}
+          const [mockData, setMockData] = React.useState([
+            {
+              "first_name": "Dmitri",
+              "last_name": "Pickburn",
+              "email": "dpickburn0@google.fr"
+            },
+            {
+              "first_name": "Darelle",
+              "last_name": "Whitlow",
+              "email": "dwhitlow1@tumblr.com"
+            }]);
+          return (
+            <div>
+              <ReactUtilityTable
+                data={mockData}
+                columns={[
+                  { title: "Name", field: "first_name" },
+                  { title: "Last Name", field: "last_name", },
+                  { title: "Email", field: "email", },
+                ]}
                 options={{
-                    selection: true,
-                    // selectAll:true,
-                    // selectionTitle:"Check All"                   
+                  selection: true,
+                  // selectAll:true,
+                  // selectionTitle:"Check All"                   
                 }}
                 // for typescript onSelectionChange={(selectedRow: any) => console.log(selectedRow)}
                 onSelectionChange={(selectedRow) => console.log(selectedRow)}
@@ -52,6 +54,7 @@ export default function Selection() {
         scope={scope}
         theme={theme}
       >
+         <LiveError className='error'/>
         <Layout code={
           <LiveEditor />
         }
@@ -59,7 +62,7 @@ export default function Selection() {
             <LivePreview />
           }
         />
-        <LiveError />
+      
       </LiveProvider>
 
 

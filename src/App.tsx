@@ -11,7 +11,7 @@ import Styling from './Mains/Styling';
 import ExportExcel from './Mains/ExcelDownload';
 import Others from './Mains/Others';
 import ShowTotal from './Mains/ShowTotal';
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function TabPanel(props: any) {
 
@@ -114,8 +114,9 @@ const App = () => {
 
       </Grid>
       <footer style={{ position: "fixed", width: "100%", }}>
-        <div style={{ padding: "5px 10px", textAlign: 'right' }}>Created by <a  href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir </a>
-        and <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
+        <div style={{ padding: "5px 10px", display:"flex", justifyContent:"flex-end", alignItems:"center" }}>
+          Created by &nbsp;<LinkedInIcon /> &nbsp;<a  href={"https://www.linkedin.com/in/benazir-mulla/"}>  Benazir </a>
+          &ensp; and&ensp; <LinkedInIcon /> &nbsp; <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
       </footer>
     </div>
   );

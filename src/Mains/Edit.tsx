@@ -12,31 +12,32 @@ export default function Edit() {
     `   //import React from 'react';
     //import { ReactUtilityTable } from 'react-utility-table';
     function demo() {
-      const [tableData, setTableData] = React.useState([{
-        "first_name": "Dmitri",
-        "last_name": "Pickburn",
-        "email": "dpickburn0@google.fr",
-        "credit": 2,
-      },
-      {
-        "first_name": "Darelle",
-        "last_name": "Whitlow",
-        "email": "dwhitlow1@tumblr.com",
-        "credit": 5,
-      }]);
-
+      const [mockData, setMockData] = React.useState([
+        {
+          "first_name": "Dmitri",
+          "last_name": "Pickburn",
+          "email": "dpickburn0@google.fr",
+          "credit": 2,
+        },
+        {
+          "first_name": "Darelle",
+          "last_name": "Whitlow",
+          "email": "dwhitlow1@tumblr.com",
+          "credit": 5,
+        }]);
+  
       return (
         <div>
           <ReactUtilityTable
-            data={tableData} 
+            data={mockData}
             columns={[
               { title: "Name", field: "first_name", editable: false },
-              {title: "Credit", field: "credit", type:"number"},
+              { title: "Credit", field: "credit", type: "number" },
               {
                 title: "Last Name", field: "last_name",
                 render: (rowData) =>
                   <input value={rowData.first_name} type="button"
-                    onClick={() => 
+                    onClick={() =>
                       alert(rowData.first_name
                         + " " + rowData.last_name)} />
               },
@@ -54,41 +55,46 @@ export default function Edit() {
               onRowAdd: (newData) =>
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
-                    setTableData([...tableData, newData]);
+                    setMockData([...mockData, newData]);
                     resolve();
                   }, 1000)
                 }),
               onRowUpdate: (newData, oldData) =>
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
-                    const dataUpdate = [...tableData];
+                    const dataUpdate = [...mockData];
                     const index = oldData.tableData.id;
                     dataUpdate[index] = newData;
-                    setTableData([...dataUpdate]);
+                    setMockData([...dataUpdate]);
                     resolve();
                   }, 1000)
                 }),
               onRowDelete: (oldData) =>
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
-                    const dataDelete = [...tableData];
+                    const dataDelete = [...mockData];
                     const index = oldData.tableData.id;
                     dataDelete.splice(index, 1);
-                    setTableData([...dataDelete]);
+                    setMockData([...dataDelete]);
                     resolve();
                   }, 1000)
                 })
-            }} />
+            }}
+          />
         </div>
-      );
-    }`
+      )} `
+
+
+
+
   return (
     <>
-    
+
       <LiveProvider code={code}
         scope={scope}
         theme={theme}
       >
+         <LiveError className='error'/>
         <Layout code={
           <LiveEditor />
         }
@@ -96,7 +102,7 @@ export default function Edit() {
             <LivePreview />
           }
         />
-        <LiveError />
+     
       </LiveProvider>
     </>
   )
