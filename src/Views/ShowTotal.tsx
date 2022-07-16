@@ -38,10 +38,12 @@ export default function ShowTotal() {
                 ]}
                 options={{
                   showTotal: true,
+                  focusRow: true,  //onTab will work on row on Space onRowClick will fire
                   // you can add your own class Name for last field
                   // totalRowClassName: "yeloe", 
                   totalTitle: "Total Amount",
                 }}
+                onRowClick={(evt, rowClick) => console.log(rowClick, "selectedRow")}
               />
             </div>
           );

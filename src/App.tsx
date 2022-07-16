@@ -41,22 +41,15 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-// function a11yProps(index: any) {
 
-//   return {
-//     id: `simple-tab-${index}`,
-//     'aria-controls': `simple-tabpanel-${index}`,
-//   };
-// }
 const App = () => {
-  // const classes = useStyles();
+
   const [value, setValue] = React.useState(0);
 
 
 
   const handleChange = (event: any, newValue: any) => {
     setValue(newValue);
-    // console.log(newValue,"newValue")
   };
 
   return (
@@ -64,8 +57,6 @@ const App = () => {
       <Grid container >
         <Header />
 
-
-        {/* <Box sx={{ width: '100%', paddingBottom: ".8rem", boxShadow: "0px 4px 20px #0000001a" }} className={classes.root}> */}
         <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
           <Tabs value={value} onChange={handleChange} className="db-tabs" variant="scrollable"
             scrollButtons="auto" allowScrollButtonsMobile
@@ -80,9 +71,8 @@ const App = () => {
             <Tab label="Excel Download" />
             <Tab label="Summary" />
             <Tab label="Other Feature" />
-
           </Tabs>
-          {/* <Box>Logout </Box> */}
+          
         </Box>
         <Grid item xs={12} className="top-margin-tabs" >
           <TabPanel value={value} index={0}>
