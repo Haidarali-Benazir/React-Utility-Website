@@ -1,6 +1,6 @@
-import Dashboard from '../Mains/Dashboard';
+import Dashboard from '../Views/Dashboard';
 // import Install from '../Mains/Install';
-import Features from '../Mains/Features';
+import Features from '../Views/Features';
 import DemoPage from '../Demo/Demo';
 
 const Support = () => {

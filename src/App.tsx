@@ -3,15 +3,16 @@ import { Box } from '@mui/system';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Components/Header';
-import Dashboard from './Mains/Dashboard';
-import Edit from './Mains/Edit';
-import Filter from './Mains/Filter';
-import Selection from './Mains/Selection';
-import Styling from './Mains/Styling';
-import ExportExcel from './Mains/ExcelDownload';
-import Others from './Mains/Others';
-import ShowTotal from './Mains/ShowTotal';
+import Dashboard from './Views/Dashboard';
+import Edit from './Views/Edit';
+import Filter from './Views/Filter';
+import Selection from './Views/Selection';
+import Styling from './Views/Styling';
+import ExportExcel from './Views/ExcelDownload';
+import Others from './Views/Others';
+import ShowTotal from './Views/ShowTotal';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ApiCall from './Views/ApiCall';
 
 function TabPanel(props: any) {
 
@@ -65,13 +66,14 @@ const App = () => {
 
 
         {/* <Box sx={{ width: '100%', paddingBottom: ".8rem", boxShadow: "0px 4px 20px #0000001a" }} className={classes.root}> */}
-        <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a",}} >
+        <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
           <Tabs value={value} onChange={handleChange} className="db-tabs" variant="scrollable"
             scrollButtons="auto" allowScrollButtonsMobile
             aria-label="scrollable auto tabs example" color="#fff">
             {/* <Tab icon={<DashboardOutlinedIcon />} label="Dashboard" /> */}
             <Tab label="Welcome" />
             <Tab label="Edit" />
+            <Tab label="Api Call" />
             <Tab label="Styling" />
             <Tab label="Filter" />
             <Tab label="Selection" />
@@ -90,33 +92,43 @@ const App = () => {
             <Edit />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <Styling />
+            <ApiCall />
+
 
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <Filter />
+            <Styling />
+
           </TabPanel>
 
           <TabPanel value={value} index={4}>
-            <Selection />
+            <Filter />
+
           </TabPanel>
 
           <TabPanel value={value} index={5}>
-            <ExportExcel />
+            <Selection />
+
           </TabPanel>
           <TabPanel value={value} index={6}>
-            <ShowTotal />
+            <ExportExcel />
+
           </TabPanel>
           <TabPanel value={value} index={7}>
+            <ShowTotal />
+
+          </TabPanel>
+          <TabPanel value={value} index={8}>
+
             <Others />
           </TabPanel>
         </Grid>
 
       </Grid>
       <footer style={{ position: "fixed", width: "100%", }}>
-        <div style={{ padding: "5px 10px", display:"flex", justifyContent:"flex-end", alignItems:"center" }}>
-          Created by &nbsp;<LinkedInIcon /> &nbsp;<a  href={"https://www.linkedin.com/in/benazir-mulla/"}>  Benazir </a>
-          &ensp; and&ensp; <LinkedInIcon /> &nbsp; <a  href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
+        <div style={{ padding: "5px 10px", display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+          Created by &nbsp;<LinkedInIcon /> &nbsp;<a href={"https://www.linkedin.com/in/benazir-mulla/"}>  Benazir </a>
+          &ensp; and&ensp; <LinkedInIcon /> &nbsp; <a href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
       </footer>
     </div>
   );

@@ -30,25 +30,24 @@ export default function Styling() {
             }]);
             return (
                 <div>
-                    <ReactUtilityTable
-                        data={tableData}
-                        columns={[
-                            {
-                                title: "Name", field: 'first_name',
-                                cellStyle: { backgroundColor: "black", color: "#fff" }
-                            },
-                            { title: "Last Name", field: "last_name", },
-                            { title: "Email", field: "email", },
-                        ]}
-                        options={{
-                            headerStyle: {
-                                backgroundColor: '#01579b',
-                                color: '#FFF'
-                            }
-                        }}
-    
-    
-                    />
+                <ReactUtilityTable
+                data={tableData}
+                columns={[
+                    { title: "Name", field: 'first_name', },
+                    { title: "Last Name", field: "last_name", },        
+                   
+                    { title: "Email", field: "email", 
+                    cellStyle: { backgroundColor: "#253e85", color: "#fff"} },
+                ]}
+                options={{
+                    headerStyle: {
+                        backgroundColor: '#5b2aef',
+                        color: '#FFF'
+                    }
+                }}
+
+
+            />
                 </div>
             );
         }
@@ -56,7 +55,7 @@ export default function Styling() {
                 scope={scope}
                 theme={theme}
             >
-                <LiveError className='error'/>
+                <LiveError className='error' />
                 <Layout code={
                     <LiveEditor />
                 }
@@ -64,7 +63,7 @@ export default function Styling() {
                         <LivePreview />
                     }
                 />
-               
+
             </LiveProvider>
 
 
