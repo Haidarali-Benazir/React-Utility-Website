@@ -51,6 +51,9 @@ export default function Edit() {
                 )
               }
             ]}
+            options={{
+            //  actionCellPositonStart:false,
+            }}
             editable={{
               onRowAdd: (newData) =>
                 new Promise((resolve, reject) => {

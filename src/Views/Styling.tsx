@@ -43,7 +43,13 @@ export default function Styling() {
                     headerStyle: {
                         backgroundColor: '#5b2aef',
                         color: '#FFF'
-                    }
+                    },
+                    toolbarStyle: {
+                        backgroundColor: '#5b2aef',
+                        color: '#FFF'
+                    },
+                    
+                    globalSearch:false
                 }}
 
 

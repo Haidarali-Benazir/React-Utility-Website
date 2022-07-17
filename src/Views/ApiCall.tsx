@@ -66,8 +66,13 @@ export default function ApiCall() {
                 ]}
 
                 options={{
-                    paging: false,//paging should be always false when onScrollFetch is called
-                    maxBodyHeight: '8rem' //always prefer to give height for scroll
+                    paging: false,  
+//paging should be always false when onScrollFetch is called
+                    maxBodyHeight: '8rem' ,
+ //always prefer to give height for scroll effect
+                    showSerialNo:true,
+//incase if you want to serial no/counting
+                    //serialNoTitle:"Sr No",
                 }}
                 stopScrollFetch={stopScroll}
                 stopScrollFetchText="You Reached to Bottom"
@@ -80,6 +85,9 @@ export default function ApiCall() {
                         resolve();
                     }, 3000)
                 })}
+
+               
+                
 
             />
                 </div>
