@@ -46,6 +46,10 @@ body ::-webkit-scrollbar {
     color: #92929c;
 }
 
+.sp-c-ctabmA {
+    border: none !important;
+}
+
 .Mui-selected {
     color: #fff !important;
     background-color: #11bce7 !important;

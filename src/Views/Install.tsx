@@ -3,6 +3,7 @@ import theme from 'prism-react-renderer/themes/nightOwl';
 import { ReactUtilityTable } from 'react-utility-table';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import Layout from '../Components/Layout';
+import { Sandpack } from '@codesandbox/sandpack-react';
 
 
 const Install = (props: any) => {
@@ -10,7 +11,9 @@ const Install = (props: any) => {
   // const simpleEx = require('../Images/SimpleExample.PNG');
   const scope = { ReactUtilityTable };
   const code =
-    ` function demo() {
+    ` import React from 'react';
+     import { ReactUtilityTable } from 'react-utility-table';
+     export default function App() {
       const [mockData, setMockData] = React.useState([
         { "first_name": "Dwayne", "last_name": "Johnson","age": 48 },
         { "first_name": "John", "last_name": "Cena", "age": 46 },
@@ -53,7 +56,35 @@ const Install = (props: any) => {
           <strong>Basic example</strong> : Pass <strong>columns</strong> and <strong> data </strong> to the React-Utitlity-Table
         </p>
 
-        <LiveProvider code={code}
+        <Sandpack
+        // theme={theme}
+        template="react"
+        files={{
+          "/App.js": code,
+        }}
+        customSetup={{
+          dependencies: {
+            "react": "18.0.0",
+            "react-dom": "18.0.0",
+            "react-scripts": "5.0.1",
+            "react-utility-table":"2.1.0"
+          },
+        }}
+        theme="dark" 
+        options={{
+          showLineNumbers: true, // default - true
+          // showInlineErrors: true, // default - false
+          // wrapContent: true, // default - false
+          editorHeight: 420, // default - 300
+          // editorWidthPercentage: 60, // default - 50
+        }}
+        
+      // You can change these examples!
+      // Try uncommenting any of these lines
+      // theme="dark"
+      // template="react"
+    />
+        {/* <LiveProvider code={code}
           scope={scope}
           theme={theme}
         >
@@ -66,7 +97,7 @@ const Install = (props: any) => {
             }
           />
           
-        </LiveProvider>
+        </LiveProvider> */}
         {/* <img src={simpleEx} /> */}
       </div>
     </>
