@@ -74,7 +74,7 @@ const App = () => {
           </Tabs>
           
         </Box>
-        <Grid item xs={12} className="top-margin-tabs" style={{transform:"scale(.9)"}} >
+        <Grid item xs={12} className="top-margin-tabs"  >
           <TabPanel value={value} index={0}>
             <Dashboard />
           </TabPanel>

@@ -21,15 +21,25 @@ export default function Selection() {
         function demo() {
           const [mockData, setMockData] = React.useState([
             {
-              "first_name": "Dmitri",
-              "last_name": "Pickburn",
-              "email": "dpickburn0@google.fr"
+              first_name: "Dwayne",
+              last_name: "Johnson",
+              email: "DwayneJohnson@gmail.com",
             },
             {
-              "first_name": "Darelle",
-              "last_name": "Whitlow",
-              "email": "dwhitlow1@tumblr.com"
-            }]);
+              first_name: "John",
+              last_name: "Cena",
+              email: "JohnCena@gmail.com",
+            },
+            {
+              first_name: "Randy",
+              last_name: "Orton",
+              email: "RandyOrton@gmail.com",
+            },
+            {
+              first_name: "Roman",
+              last_name: "Reign",
+              email: "RomanReign@gmail.com",
+            },]);
           return (
             <div>
               <ReactUtilityTable
@@ -41,6 +51,7 @@ export default function Selection() {
                 ]}
                 options={{
                   selection: true,
+                  disableSelectProps: (rowData) =>rowData.first_name === "Dmitri",
                   // selectAll:true,
                   // selectionTitle:"Check All"                   
                 }}

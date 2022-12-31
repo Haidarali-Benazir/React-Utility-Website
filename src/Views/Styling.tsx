@@ -18,26 +18,32 @@ export default function Styling() {
         //import { ReactUtilityTable } from 'react-utility-table';
 
         function demo() {
-            const [tableData, setTableData] = React.useState([{
-                "first_name": "Dmitri",
-                "last_name": "Pickburn",
-                "email": "dpickburn0@google.fr"
-            },
-            {
-                "first_name": "Darelle",
-                "last_name": "Whitlow",
-                "email": "dwhitlow1@tumblr.com"
-            }]);
+            const [tableData, setTableData] = React.useState([ 
+              {
+                first_name: "John",
+                last_name: "Cena",
+                email: "JohnCena@gmail.com",
+              },
+              {
+                first_name: "Randy",
+                last_name: "Orton",
+                email: "RandyOrton@gmail.com",
+              },
+              {
+                first_name: "Roman",
+                last_name: "Reign",
+                email: "RomanReign@gmail.com",
+              },]);
             return (
                 <div>
                 <ReactUtilityTable
                 data={tableData}
                 columns={[
-                    { title: "Name", field: 'first_name', },
-                    { title: "Last Name", field: "last_name", },        
+                    { title: "Name", field: 'first_name',thStyle:{backgroundColor:"blue",color:"#fff"} },
+                    { title: "Last Name", field: "last_name" },        
                    
                     { title: "Email", field: "email", 
-                    cellStyle: { backgroundColor: "#253e85", color: "#fff"} },
+                    cellStyle: (rowData) => ({backgroundColor:"rgb(241 187 33 / 55%)",  color: rowData.first_name ==="Randy"? "red" :"green"}) },
                 ]}
                 options={{
                     headerStyle: {

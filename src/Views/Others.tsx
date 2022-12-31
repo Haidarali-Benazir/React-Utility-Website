@@ -18,25 +18,24 @@ export default function Others() {
       //import { ReactUtilityTable } from 'react-utility-table';
       function demo() {
         const [mockData, setMockData] = React.useState([
-          {
-            "first_name": "Dmitri",
-            "last_name": "Pickburn",
-            "email": "dpickburn0@google.fr"
-          },
-          {
-            "first_name": "Darelle",
-            "last_name": "Whitlow",
-            "email": "dwhitlow1@tumblr.com"
-          }]);
+          { "first_name": "Dwayne", "last_name": "Johnson","email": "DwayneJohnson@gmail.com" },
+          { "first_name": "John", "last_name": "Cena", "email": "JohnCena@gmail.com" },
+          { "first_name": "Randy", "last_name": "Orton","email": "RandyOrton@gmail.com" },
+          { "first_name": "Roman", "last_name": "Reign", "email": "RomanReign@gmail.com" },]);
         return (
           <div>
             <ReactUtilityTable
               data={mockData}
               columns={[
-                { title: "Name", field: "first_name" },
-                { title: "Name", field: "last_name", filtering: false },
-                { title: "Name", field: "email", },
+                { title: "Name", field: "first_name", headRender: (title) => <input value={title} type="button" /> },
+                { title: "Last Name", field: "last_name", filtering: false },
+                { title: "Email", field: "email", },
               ]}
+              emptyDataMessage={
+                <div>
+                <input type={"checkbox"} /> No data found 
+                </div>
+              }
               options={{
                 toolbar: false,
                 pageSize: 10,
@@ -45,7 +44,7 @@ export default function Others() {
                 // paging:false,                  
               }}
               //for typescript onRowClick={(evt: any, rowClick: any) => console.log(rowClick, "selectedRow")}
-              onRowClick={(evt, rowClick) => console.log(rowClick, "selectedRow")}
+              onRowClick={(evt, rowClick) => console.log(rowClick, "rowClicked")}
             />
           </div>
         );

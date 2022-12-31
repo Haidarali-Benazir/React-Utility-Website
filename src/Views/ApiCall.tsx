@@ -17,22 +17,22 @@ export default function ApiCall() {
           //import React from 'react';
           //import { ReactUtilityTable } from 'react-utility-table';
           function demo() {
-            const [mockData, setMockData] = React.useState([
-                {
-                    "first_name": "Dmitri",
-                    "last_name": "Pickburn",
-                    "email": "dpickburn0@google.fr"
-                },
-                {
-                    "first_name": "Darelle",
-                    "last_name": "Whitlow",
-                    "email": "dwhitlow1@tumblr.com"
-                },
-                {
-                    "first_name": "Brinston",
-                    "last_name": "Roz",
-                    "email": "brinston@tumblr.com"
-                }
+            const [mockData, setMockData] = React.useState([                
+                  {
+                    first_name: "Brock",
+                    last_name: "Lesner",
+                    email: "BrockLesnar@gmail.com",
+                  },
+                  {
+                    first_name: "Randy",
+                    last_name: "Orton",
+                    email: "RandyOrton@gmail.com",
+                  },
+                  {
+                    first_name: "Roman",
+                    last_name: "Reign",
+                    email: "RomanReign@gmail.com",
+                  },
         
             ]);
         
@@ -41,16 +41,15 @@ export default function ApiCall() {
             const apiCall = (oldData) => {
         
                 setMockData([...oldData, {
-        
-                    "first_name": "Fetch",
-                    "last_name": "Data",
-                    "email": "apiCall@tumblr.com"
-                },
-                {
-                    "first_name": "Demo",
-                    "last_name": "Data",
-                    "email": "demo@tumblr.com"
-                }])
+                    first_name: "Dwayne",
+                    last_name: "Johnson",
+                    email: "DwayneJohnson@gmail.com",
+                  },
+                  {
+                    first_name: "John",
+                    last_name: "Cena",
+                    email: "JohnCena@gmail.com",
+                  },])
         
                 setStopScroll(true);
             }
@@ -73,6 +72,11 @@ export default function ApiCall() {
                     showSerialNo:true,
 //incase if you want to serial no/counting
                     //serialNoTitle:"Sr No",
+                    
+                    // scollStopTextStyle: {
+                    //     backgroundColor: '#01579b',
+                    //     color: '#FFF'
+                    //   },
                 }}
                 stopScrollFetch={stopScroll}
                 stopScrollFetchText="You Reached to Bottom"

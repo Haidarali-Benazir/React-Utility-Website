@@ -19,15 +19,16 @@ export default function ExportExcel() {
         function demo() {
           const [mockData, setMockData] = React.useState([
             {
-              "first_name": "Dmitri",
-              "last_name": "Pickburn",
-              "email": "dpickburn0@google.fr"
+              first_name: "Dwayne",
+              last_name: "Johnson",
+              email: "DwayneJohnson@gmail.com",
             },
             {
-              "first_name": "Darelle",
-              "last_name": "Whitlow",
-              "email": "dwhitlow1@tumblr.com"
-            }]);
+              first_name: "John",
+              last_name: "Cena",
+              email: "JohnCena@gmail.com",
+            },
+           ]);
           return (
             <div>
               <ReactUtilityTable

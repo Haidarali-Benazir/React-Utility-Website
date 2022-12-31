@@ -14,32 +14,38 @@ export default function Edit() {
     function demo() {
       const [mockData, setMockData] = React.useState([
         {
-          "first_name": "Dmitri",
-          "last_name": "Pickburn",
-          "email": "dpickburn0@google.fr",
-          "credit": 2,
+          first_name: "Brock",
+          credit: 750,
+          last_name: "Lesnar",
+          email: "BrockLesnar@gmail.com",
         },
         {
-          "first_name": "Darelle",
-          "last_name": "Whitlow",
-          "email": "dwhitlow1@tumblr.com",
-          "credit": 5,
-        }]);
+          first_name: "John",
+          credit: 700,
+          last_name: "Cena",
+          email: "JohnCena@gmail.com",
+        },
+        {
+          first_name: "Randy",
+          credit: 800,
+          last_name: "Orton",
+          email: "RandyOrton@gmail.com",
+        },]);
   
       return (
         <div>
           <ReactUtilityTable
             data={mockData}
             columns={[
-              { title: "Name", field: "first_name", editable: false },
-              { title: "Credit", field: "credit", type: "number" },
+              { title: "Name", field: "first_name", editable: false,
+              render: (rowData) =>
+                <input value={rowData.first_name} type="button"
+                  onClick={() =>
+                    alert(rowData.first_name
+                      + " " + rowData.last_name)} /> },
+              { title: "Credit", field: "credit", type: "number" , sorter:(a,b)=> a.credit - b.credit  },
               {
-                title: "Last Name", field: "last_name",
-                render: (rowData) =>
-                  <input value={rowData.first_name} type="button"
-                    onClick={() =>
-                      alert(rowData.first_name
-                        + " " + rowData.last_name)} />
+                title: "Last Name", field: "last_name"
               },
               {
                 title: "Email", field: "email", editComponent: props => (
@@ -53,6 +59,9 @@ export default function Edit() {
             ]}
             options={{
             //  actionCellPositonStart:false,
+            // deleteRowText:"Are you sure you want to delete this user ?",
+            tooltipDescText:"Descending Order",
+            tooltipAscText: "Ascending Order"
             }}
             editable={{
               onRowAdd: (newData) =>
@@ -67,6 +76,10 @@ export default function Edit() {
                   setTimeout(() => {
                     const dataUpdate = [...mockData];
                     const index = oldData.tableData.id;
+                    if(newData.credit === oldData.credit){
+                      alert("Value of Credit should be different from previous value.");
+                      reject();   //for validation field example
+                    }
                     dataUpdate[index] = newData;
                     setMockData([...dataUpdate]);
                     resolve();
