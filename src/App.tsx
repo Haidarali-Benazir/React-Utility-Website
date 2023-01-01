@@ -1,21 +1,20 @@
-import { Grid, Tab, Tabs } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from './Components/Header';
-import Dashboard from './Views/Dashboard';
-import Edit from './Views/Edit';
-import Filter from './Views/Filter';
-import Selection from './Views/Selection';
-import Styling from './Views/Styling';
-import ExportExcel from './Views/ExcelDownload';
-import Others from './Views/Others';
-import ShowTotal from './Views/ShowTotal';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ApiCall from './Views/ApiCall';
+import { Grid, Tab, Tabs } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "./Components/Header";
+import Dashboard from "./Views/Dashboard";
+import Edit from "./Views/Edit";
+import Filter from "./Views/Filter";
+import Selection from "./Views/Selection";
+import Styling from "./Views/Styling";
+import ExportExcel from "./Views/ExcelDownload";
+import Others from "./Views/Others";
+import ShowTotal from "./Views/ShowTotal";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ApiCall from "./Views/ApiCall";
 
 function TabPanel(props: any) {
-
   const { children, value, index, ...other } = props;
 
   return (
@@ -26,11 +25,7 @@ function TabPanel(props: any) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box>{children}</Box>}
     </div>
   );
 }
@@ -41,21 +36,23 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
 const App = () => {
-
   const [value, setValue] = React.useState(0);
 
+  // const handleChange = (event: any, newValue: any) => {
+  //   setValue(newValue);
+  // };
 
-
-  const handleChange = (event: any, newValue: any) => {
+  const handleMenuClick = (newValue: number) => {
     setValue(newValue);
   };
-
   return (
-    <div style={{ height: "100vh", position: "relative" }} className="app">
-      <Grid container >
-        <Header />
+    <div
+      style={{ height: "100vh", position: "relative" }}
+      className="app content"
+    >
+      <Grid container>
+        <Header handleMenuClick={handleMenuClick} />
 
         {/* <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
           <Tabs value={value} onChange={handleChange} className="db-tabs" variant="scrollable"
@@ -73,7 +70,7 @@ const App = () => {
           </Tabs>
           
         </Box> */}
-        <Grid item xs={12} className="top-margin-tabs"  >
+        <Grid item xs={12} className="top-margin-tabs">
           <TabPanel value={value} index={0}>
             <Dashboard />
           </TabPanel>
@@ -82,37 +79,28 @@ const App = () => {
           </TabPanel>
           <TabPanel value={value} index={2}>
             <ApiCall />
-
-
           </TabPanel>
           <TabPanel value={value} index={3}>
             <Styling />
-
           </TabPanel>
 
           <TabPanel value={value} index={4}>
             <Filter />
-
           </TabPanel>
 
           <TabPanel value={value} index={5}>
             <Selection />
-
           </TabPanel>
           <TabPanel value={value} index={6}>
             <ExportExcel />
-
           </TabPanel>
           <TabPanel value={value} index={7}>
             <ShowTotal />
-
           </TabPanel>
           <TabPanel value={value} index={8}>
-
             <Others />
           </TabPanel>
         </Grid>
-
       </Grid>
       {/* <footer style={{ position: "fixed", width: "100%", }}>
         <div style={{ padding: "5px 10px", display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
@@ -121,6 +109,6 @@ const App = () => {
       </footer> */}
     </div>
   );
-}
+};
 
 export default App;
