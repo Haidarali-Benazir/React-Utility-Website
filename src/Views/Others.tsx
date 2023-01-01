@@ -27,7 +27,7 @@ export default function Others() {
             <ReactUtilityTable
               data={mockData}
               columns={[
-                { title: "Name", field: "first_name", headRender: (title) => <input value={title} type="button" /> },
+                { title: "Name", field: "first_name" },
                 { title: "Last Name", field: "last_name", filtering: false },
                 { title: "Email", field: "email", },
               ]}

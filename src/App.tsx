@@ -14,6 +14,7 @@ import ShowTotal from "./Views/ShowTotal";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ApiCall from "./Views/ApiCall";
 import PaginationApi from "./Views/PaginationApi";
+import CustomRender from "./Views/CustomRender";
 
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -102,7 +103,7 @@ const App = () => {
             <PaginationApi />
           </TabPanel>
           <TabPanel value={value} index={9}>
-            <h1> helo</h1>
+           <CustomRender />
           </TabPanel>
           <TabPanel value={value} index={10}>
             <Others />

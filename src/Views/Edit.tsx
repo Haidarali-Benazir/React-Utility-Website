@@ -37,12 +37,7 @@ export default function Edit() {
           <ReactUtilityTable
             data={mockData}
             columns={[
-              { title: "Name", field: "first_name", editable: false,
-              render: (rowData) =>
-                <input value={rowData.first_name} type="button"
-                  onClick={() =>
-                    alert(rowData.first_name
-                      + " " + rowData.last_name)} /> },
+              { title: "Name", field: "first_name", editable: false },
               { title: "Credit", field: "credit", type: "number" , sorter:(a,b)=> a.credit - b.credit  },
               {
                 title: "Last Name", field: "last_name"
