@@ -18,7 +18,9 @@ const PaginationApi = () => {
                 />
               ), },
             ]}
-
+            options={{
+                pageSize: 4,
+              }}
             queryData={(query) =>
                 new Promise(async (resolve, reject) => {
                   let url = "https://reqres.in/api/users?";
