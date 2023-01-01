@@ -200,7 +200,7 @@ footer {
 }
 
 .list-bottom-border {
-    border-bottom: 1px solid rgb(184, 182, 182);
+    /* border-bottom: 1px solid rgb(184, 182, 182); */
 }
 
 .list-text>span {
@@ -215,7 +215,7 @@ footer {
     background-color: #fff !important;
     color: #000 !important;
     border-radius: 5px !important;
-    border-bottom: 1px solid rgb(184, 182, 182);
+    /* border-bottom: 1px solid rgb(184, 182, 182); */
 }
 
 .content {
