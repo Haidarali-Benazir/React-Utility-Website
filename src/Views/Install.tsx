@@ -33,7 +33,7 @@ const Install = (props: any) => {
             options={{
               pageSize: 4,
               headerStyle: {
-                backgroundColor: "#26c6da",
+                backgroundColor: "#2f569d",
                 color: "#FFF",
               },
               rowStyle: (rowData) => ({

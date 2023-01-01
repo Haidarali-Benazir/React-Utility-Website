@@ -34,7 +34,7 @@ export default function Header(props: Props) {
 
   const drawer = (
     <div>
-        <h1>Logo</h1>
+        <LogoIcon/>
       <List>
         {[
           "Welcome",
@@ -83,7 +83,7 @@ export default function Header(props: Props) {
             <MenuIcon />
           </IconButton>
 
-          <h3>React Utilit Table</h3>
+          {/* <h3>React Utilit Table</h3> */}
         </div>
 
         <div
@@ -92,6 +92,9 @@ export default function Header(props: Props) {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
+            color: "#2f569d",
+            fontSize: "0.9rem",
+            fontWeight: "600"
           }}
         >
           Created by &nbsp;
@@ -107,7 +110,8 @@ export default function Header(props: Props) {
 
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        // style={{ backgroundColor: "#2f569d", color: "#fff"}}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: "#2f569d" }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}

@@ -34,7 +34,10 @@ code {
     width: 8px;
     height: 8px;
 }
-
+.MuiDrawer-paper{
+    background-color: #2f569d !important;
+    color: #fff !important;
+}
 .utility-web-footer {
     margin-top: 1rem;
     padding: 0.1rem;
