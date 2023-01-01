@@ -35,7 +35,7 @@ export default function Header(props: Props) {
   const drawer = (
     <div>
         <LogoIcon/>
-      <List>
+      <List style={{overflow:"auto"}}>
         {[
           "Welcome",
           "Edit",
