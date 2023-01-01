@@ -10,38 +10,43 @@ const Install = (props: any) => {
   
   // const simpleEx = require('../Images/SimpleExample.PNG');
   const scope = { ReactUtilityTable };
-  const code =
-    ` import React from 'react';
-     import { ReactUtilityTable } from 'react-utility-table';
-     export default function App() {
+  const code = `import React from "react";
+    import { ReactUtilityTable } from "react-utility-table";
+    export default function App() {
       const [mockData, setMockData] = React.useState([
-        { "first_name": "Dwayne", "last_name": "Johnson","age": 48 },
-        { "first_name": "John", "last_name": "Cena", "age": 46 },
-        { "first_name": "Randy", "last_name": "Orton","age": 45 },
-        { "first_name": "Roman", "last_name": "Reign", "age": 38 },
-        { "first_name": "Brock", "last_name": "Lesnar","age": 50 },
-        { "first_name": "Roundy", "last_name": "Rousey", "age": 46 }]);
+        { first_name: "Dwayne", last_name: "Johnson", age: 48 },
+        { first_name: "John", last_name: "Cena", age: 46 },
+        { first_name: "Randy", last_name: "Orton", age: 45 },
+        { first_name: "Roman", last_name: "Reign", age: 38 },
+        { first_name: "Brock", last_name: "Lesnar", age: 50 },
+        { first_name: "Roundy", last_name: "Rousey", age: 46 },
+      ]);
       return (
         <div>
-          <ReactUtilityTable data={mockData}
+          <ReactUtilityTable
+            data={mockData}
             columns={[
-              { title: "Name", field: "first_name", filtering: false },             
+              { title: "Name", field: "first_name", filtering: false },
               { title: "Last Name", field: "last_name" },
-              { title: "Age", field: "age", sorter:(a,b)=> a.age - b.age} ,]}
+              { title: "Age", field: "age", sorter: (a, b) => a.age - b.age },
+            ]}
             options={{
-              pageSize:4,
+              pageSize: 4,
               headerStyle: {
-                backgroundColor: '#26c6da',
-                color: '#FFF'
-            },
-            rowStyle: rowData => ({
-              color: rowData.age === 20 ? 'blue' : "black"
-            }),
+                backgroundColor: "#26c6da",
+                color: "#FFF",
+              },
+              rowStyle: (rowData) => ({
+                color: rowData.age === 20 ? "blue" : "black",
+              }),
               allBorder: true,
               filtering: true,
-              exportButton: true
-            }} />
-        </div>)}`
+              exportButton: true,
+            }}
+          />
+        </div>
+      );
+    }`;
  
   return (
     <>

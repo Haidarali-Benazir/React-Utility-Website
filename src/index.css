@@ -9,7 +9,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-body ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f8f8f8;
     box-shadow: inset 0 0 5px #f8f8f8;
     -webkit-box-shadow: inset 0 0 5px #f8f8f8;
@@ -18,7 +18,7 @@ body ::-webkit-scrollbar-track {
     border: 1px solid #cbd5e1;
 }
 
-body ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #cbd5e1;
     border-radius: 10px;
     box-shadow: inset 0 0 5px #cbd5e1;
@@ -26,11 +26,11 @@ body ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
 }
 
-body ::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background: #f8f8f8;
 }
 
-body ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
@@ -178,4 +178,8 @@ footer {
     .installation .prism-code {
         overflow-y: scroll;
     }
+}
+
+.hb_component {
+    box-shadow: 0 0 8px -1px rgb(0 0 0 / 25%) !important;
 }

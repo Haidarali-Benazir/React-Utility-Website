@@ -57,11 +57,10 @@ const App = () => {
       <Grid container >
         <Header />
 
-        <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
+        {/* <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
           <Tabs value={value} onChange={handleChange} className="db-tabs" variant="scrollable"
             scrollButtons="auto" allowScrollButtonsMobile
             aria-label="scrollable auto tabs example" color="#fff">
-            {/* <Tab icon={<DashboardOutlinedIcon />} label="Dashboard" /> */}
             <Tab label="Welcome" />
             <Tab label="Edit" />
             <Tab label="Api Call" />
@@ -73,7 +72,7 @@ const App = () => {
             <Tab label="Other Feature" />
           </Tabs>
           
-        </Box>
+        </Box> */}
         <Grid item xs={12} className="top-margin-tabs"  >
           <TabPanel value={value} index={0}>
             <Dashboard />
@@ -115,11 +114,11 @@ const App = () => {
         </Grid>
 
       </Grid>
-      <footer style={{ position: "fixed", width: "100%", }}>
+      {/* <footer style={{ position: "fixed", width: "100%", }}>
         <div style={{ padding: "5px 10px", display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
           Created by &nbsp;<LinkedInIcon /> &nbsp;<a href={"https://www.linkedin.com/in/benazir-mulla/"}>  Benazir </a>
           &ensp; and&ensp; <LinkedInIcon /> &nbsp; <a href={"https://www.linkedin.com/in/haidaralichamcham/"}> Haidarali </a></div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
