@@ -60,7 +60,7 @@ const PaginationApi = () => {
                 //     color: '#FFF'
                 //   },
             }}
-            stopScrollFetch={stopScroll}
+            stopScrollFetch={stopScroll}  // for stoping scroll
             stopScrollFetchText="You Reached to Bottom"
                 
                 onScrollFetch={(oldData) => new Promise((resolve, reject) => {

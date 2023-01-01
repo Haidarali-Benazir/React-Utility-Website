@@ -22,10 +22,11 @@ interface Props {
    */
   handleMenuClick:(value:number)=>any,
   window?: () => Window;
+  selected:number,
 }
 
 export default function Header(props: Props) {
-  const { window,handleMenuClick } = props;
+  const { window,handleMenuClick, selected } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -35,23 +36,24 @@ export default function Header(props: Props) {
   const drawer = (
     <div>
         <LogoIcon/>
-      <List style={{overflow:"auto"}}>
+      <List style={{overflowY:"auto"}}>
         {[
           "Welcome",
-          "Edit",
-          "Api Call",
+          "Edit",       
           "Styling",
           "Filter",
           "Selection",
           "Excel Download",
-          "Summary",
+          "Summary",      
+          "Api Call",
+          'API on Pagination',
+          'Custom Render',
           "Other Feature",
-          'API on Pagination'
         ].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton onClick={()=> handleMenuClick(index)}>
+          <ListItem key={text} disablePadding className={ selected === index ? "active": "list-bottom-border "}>
+            <ListItemButton onClick={()=> handleMenuClick(index)} className="list-btn">
              
-              <ListItemText primary={text} />
+              <ListItemText primary={text} className="list-text" />
             </ListItemButton>
           </ListItem>
         ))}
@@ -83,7 +85,7 @@ export default function Header(props: Props) {
             <MenuIcon />
           </IconButton>
 
-          {/* <h3>React Utilit Table</h3> */}
+          <h3>React Utilit Table</h3>
         </div>
 
         <div

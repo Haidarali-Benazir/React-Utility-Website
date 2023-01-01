@@ -53,7 +53,7 @@ const App = () => {
       className="app content"
     >
       <Grid container>
-        <Header handleMenuClick={handleMenuClick} />
+        <Header handleMenuClick={handleMenuClick} selected={value} />
 
         {/* <Box sx={{ width: '100%', boxShadow: "0px 4px 20px #0000001a", }} >
           <Tabs value={value} onChange={handleChange} className="db-tabs" variant="scrollable"
@@ -77,33 +77,37 @@ const App = () => {
           </TabPanel>
           <TabPanel value={value} index={1}>
             <Edit />
-          </TabPanel>
+          </TabPanel>         
           <TabPanel value={value} index={2}>
-            <ApiCall />
-          </TabPanel>
-          <TabPanel value={value} index={3}>
             <Styling />
           </TabPanel>
 
-          <TabPanel value={value} index={4}>
+          <TabPanel value={value} index={3}>
             <Filter />
           </TabPanel>
 
-          <TabPanel value={value} index={5}>
+          <TabPanel value={value} index={4}>
             <Selection />
           </TabPanel>
-          <TabPanel value={value} index={6}>
+          <TabPanel value={value} index={5}>
             <ExportExcel />
           </TabPanel>
-          <TabPanel value={value} index={7}>
+          <TabPanel value={value} index={6}>
             <ShowTotal />
           </TabPanel>
-          <TabPanel value={value} index={8}>
-            <Others />
+          <TabPanel value={value} index={7}>
+            <ApiCall />
           </TabPanel>
-          <TabPanel value={value} index={9}>
+          <TabPanel value={value} index={8}>
             <PaginationApi />
           </TabPanel>
+          <TabPanel value={value} index={9}>
+            <h1> helo</h1>
+          </TabPanel>
+          <TabPanel value={value} index={10}>
+            <Others />
+          </TabPanel>
+         
         </Grid>
       </Grid>
       {/* <footer style={{ position: "fixed", width: "100%", }}>
