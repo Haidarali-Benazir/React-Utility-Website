@@ -13,6 +13,7 @@ import Others from "./Views/Others";
 import ShowTotal from "./Views/ShowTotal";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ApiCall from "./Views/ApiCall";
+import PaginationApi from "./Views/PaginationApi";
 
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -99,6 +100,9 @@ const App = () => {
           </TabPanel>
           <TabPanel value={value} index={8}>
             <Others />
+          </TabPanel>
+          <TabPanel value={value} index={9}>
+            <PaginationApi />
           </TabPanel>
         </Grid>
       </Grid>

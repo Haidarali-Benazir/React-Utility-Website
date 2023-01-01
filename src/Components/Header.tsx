@@ -46,6 +46,7 @@ export default function Header(props: Props) {
           "Excel Download",
           "Summary",
           "Other Feature",
+          'API on Pagination'
         ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={()=> handleMenuClick(index)}>
