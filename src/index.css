@@ -36,9 +36,40 @@ code {
 }
 
 .MuiDrawer-paper {
-    background-color: #000733 !important;
+    /* background-color: #000733 !important; */
+    /* background-color: linear-gradient(to right, #2c3e50, #000733) !important; */
     color: #fff !important;
+    background: #2c3e50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000733, #2c3e50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000733, #2c3e50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
+.imageindiv {
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffffff, #fbf9ff);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 14%);
+    color: #4c4c51;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+/* .imageindiv {
+    height: 8.5rem;
+    width: 15rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 3.8rem;
+    right: 1.4rem;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 14%);
+    color: #4c4c51;
+    padding: 4px;
+    border: 1px solid transparent;
+} */
 
 .utility-web-footer {
     margin-top: 1rem;
@@ -212,8 +243,9 @@ footer {
 }
 
 .active {
-    background-color: #fff !important;
-    color: #000 !important;
+    /* background-color: #fff !important; */
+    background: linear-gradient(to top, #eaecf1, #b9c4e1) !important;
+    color: rgb(94, 94, 95) !important;
     border-radius: 5px !important;
     /* border-bottom: 1px solid rgb(184, 182, 182); */
 }

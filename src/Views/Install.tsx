@@ -4,6 +4,7 @@ import { ReactUtilityTable } from 'react-utility-table';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import Layout from '../Components/Layout';
 import { Sandpack } from '@codesandbox/sandpack-react';
+import { Box, Grid } from '@mui/material';
 
 
 const Install = (props: any) => {
@@ -50,19 +51,15 @@ const Install = (props: any) => {
  
   return (
     <>
-      <p style={{ margin: "5px 0px", color: "#5c5454" }}>
-        <strong> Installation---  Getting Started! </strong>
-        <br></br>
-        Install this package : <a href="https://www.npmjs.com/package/react-utility-table" >npm i react-utility-table </a>
-        or <a href="https://www.npmjs.com/package/react-utility-table" >click here</a>
-      </p>
       <div>
-        <p style={{ margin: "5px 0px", color: "#5c5454" }}>
+        <p style={{ margin: "10px 0px", color: "#5c5454" }}>
           <strong>Basic example</strong> : Pass <strong>columns</strong> and <strong> data </strong> to the React-Utitlity-Table
         </p>
 
-      <Layout code={        
-            <ReactUtilityTable
+      <Box sx={{ width: '100%' }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={6}>
+        <ReactUtilityTable
               data={[
                 { "first_name": "Dwayne", "last_name": "Johnson","email": "DwayneJohnson@gmail.com" },
                 { "first_name": "John", "last_name": "Cena", "email": "JohnCena@gmail.com" },
@@ -83,15 +80,19 @@ const Install = (props: any) => {
                 toolbar: false,
                 pageSize: 10,
                 maxBodyHeight: "15rem",
-                minBodyHeight: "10rem",
+                minBodyHeight: "18.2rem",
+                headerStyle: {
+                  backgroundColor: '#c0a4fb',
+                  color: '#FFF'
+              },
                 // paging:false,                  
               }}
               //for typescript onRowClick={(evt: any, rowClick: any) => console.log(rowClick, "selectedRow")}
               onRowClick={(evt, rowClick) => console.log(rowClick, "rowClicked")}
-            />}
-            
-            ui={
-              <ReactUtilityTable
+            />
+        </Grid>
+        <Grid item xs={6}>
+        <ReactUtilityTable
               data={[
                 { first_name: "Dwayne", last_name: "Johnson", age: 48 },
                 { first_name: "John", last_name: "Cena", age: 46 },
@@ -107,34 +108,24 @@ const Install = (props: any) => {
               ]}
               options={{
                 pageSize: 3,
-               
+                maxBodyHeight: "15rem",
+                minBodyHeight: "15rem",
                 rowStyle: (rowData) => ({
                   color: rowData.age === 20 ? "blue" : "black",
                 }),
+                headerStyle: {
+                  backgroundColor: '#c0a4fb',
+                  color: '#FFF'
+              },
                 allBorder: true,
                 filtering: true,
                 exportButton: true,
               }}
             />
-            }
-            >
-
-      </Layout>
-        {/* <LiveProvider code={code}
-          scope={scope}
-          theme={theme}
-        >
-           <LiveError className='error'/>
-          <Layout showTitle={false} className="installation overide-hight" code={
-            <LiveEditor />
-          }
-            ui={
-              <LivePreview />
-            }
-          />
-          
-        </LiveProvider> */}
-        {/* <img src={simpleEx} /> */}
+        </Grid>
+        
+      </Grid>
+    </Box>
       </div>
     </>
   );
