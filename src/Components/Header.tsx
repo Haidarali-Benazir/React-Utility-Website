@@ -85,7 +85,7 @@ export default function Header(props: Props) {
             <MenuIcon />
           </IconButton>
 
-          <h3>React Utilit Table</h3>
+          <a href="https://www.npmjs.com/package/react-utility-table" > <img title="install" style={{ height: "4rem", width: "100%" }} src={process.env.PUBLIC_URL + "/npmicon.png"} /></a>
         </div>
 
         <div
