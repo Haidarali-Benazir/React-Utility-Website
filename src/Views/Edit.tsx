@@ -72,7 +72,7 @@ export default function Edit() {
                     const dataUpdate = [...mockData];
                     const index = oldData.tableData.id;
                     if(newData.credit === oldData.credit){
-                      alert("Value of Credit should be different from previous value.");
+                      alert("This is how we can have validations example value of Credit should be different from previous value.");
                       reject();   //for validation field example
                     }
                     dataUpdate[index] = newData;
