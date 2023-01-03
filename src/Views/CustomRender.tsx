@@ -3,7 +3,7 @@ import Layout from "../Components/Layout";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
 const CustomRender = () => {
-    const code = `import React from "react";
+  const code = `import React from "react";
     import { ReactUtilityTable } from "react-utility-table";
     export default function App() {
       const [mockData, setMockData] = React.useState([
@@ -15,22 +15,34 @@ const CustomRender = () => {
         { first_name: "Roundy", last_name: "Rousey", age: 46 },
       ]);
       return (
-        <div>
-          <ReactUtilityTable
-            data={mockData}
-            columns={[
-              { title: "Name", field: "first_name",  render: (rowData) =>
-              <input value={rowData.first_name} type="button"
-                onClick={() => alert(rowData.first_name + " " + rowData.last_name)} /> },
-              { title: "Last Name", field: "last_name",headRender: (title) => <input value={title} type="button" /> },
-              { title: "Age", field: "age", sorter: (a, b) => a.age - b.age },
-            ]}
-            options={{
-              pageSize: 4,          
-                        
-            }}
-          />
-        </div>
+        <ReactUtilityTable
+          data={mockData}
+          columns={[
+            {
+              title: "Name",
+              field: "first_name",
+              render: (rowData) => (
+                <input
+                  value={rowData.first_name}
+                  type="button"
+                  onClick={() =>
+                 alert(rowData.first_name + " " + rowData.last_name)
+                  }
+                />
+              ),
+            },
+            {
+             title: "Last Name",
+             field: "last_name",
+         headRender: (title) => <input value={title} type="button" />,
+            },
+            { title: "Age", field: "age",
+             sorter: (a, b) => a.age - b.age },
+          ]}
+          options={{
+            pageSize: 4,
+          }}
+        />
       );
     }`;
   return (
