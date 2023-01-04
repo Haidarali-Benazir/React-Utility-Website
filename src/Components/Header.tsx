@@ -45,10 +45,12 @@ export default function Header(props: Props) {
           "Selection",
           "Excel Download",
           "Summary",      
-          "Api Call",
+          "Api on onScoll",
           'API on Pagination',
           'Custom Render',
+          "KeyDownEvent",
           "Other Feature",
+          
         ].map((text, index) => (
           <ListItem key={text} disablePadding className={ selected === index ? "active": "list-bottom-border "}>
             <ListItemButton onClick={()=> handleMenuClick(index)} className="list-btn">
@@ -68,12 +70,7 @@ export default function Header(props: Props) {
     <div style={{ width: "100%" }}>
       <header className="appbar">
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: ".5rem",
-            marginLeft: "5px",
-          }}
+         className="npm-logo-tag"
         >
           <IconButton
             color="inherit"
@@ -89,23 +86,15 @@ export default function Header(props: Props) {
         </div>
 
         <div
-          style={{
-            padding: "10px 10px",
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            color: "#2f569d",
-            fontSize: "0.9rem",
-            fontWeight: "600"
-          }}
+         className="creator-name"
         >
           Created by &nbsp;
           <LinkedInIcon /> &nbsp;
           <a href={"https://www.linkedin.com/in/benazir-mulla/"}> Benazir </a>
-          &ensp; and&ensp; <LinkedInIcon /> &nbsp;{" "}
+          &ensp;and&ensp; <LinkedInIcon /> &nbsp;
           <a href={"https://www.linkedin.com/in/haidaralichamcham/"}>
-            {" "}
-            Haidarali{" "}
+           
+            Haidarali
           </a>
         </div>
       </header>

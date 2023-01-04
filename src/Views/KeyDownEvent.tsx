@@ -1,37 +1,32 @@
 import React from "react";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-export default function Others() {
-  const code = `import React from 'react';
+export default function KeyDownEvent() {
+  const code = `
 import { ReactUtilityTable } from 'react-utility-table';
   export default function App() {
-    const [mockData, setMockData] = React.useState([
-      { first_name: "John", last_name: "Cena", email: "JohnCena@gmail.com" },
-      { first_name: "Randy", last_name: "Orton", email: "RandyOrton@gmail.com" },
-      { first_name: "Roman", last_name: "Reign", email: "RomanReign@gmail.com" },
-    ]);
-
-    const [showData, setShowData] = React.useState(false);
+ 
     return (
       <div>
         <ReactUtilityTable
-          data={ showData ? mockData:[]}
+          data={ [
+            { first_name: "John", last_name: "Cena", email: "JohnCena@gmail.com" },
+            { first_name: "Randy", last_name: "Orton", email: "RandyOrton@gmail.com" },
+            { first_name: "Roman", last_name: "Reign", email: "RomanReign@gmail.com" },
+          ]}
           columns={[
             { title: "Name", field: "first_name" },
             { title: "Last Name", field: "last_name", filtering: false },
             { title: "Email", field: "email" },
           ]}
-          emptyDataMessage={
-            <div onClick={()=>setShowData(true)} style={{cursor:"pointer"}}>
-             <span style={{color:"blue"}}>Click</span> here to view Data
-            </div>
-          }
+          
+          actions={<button>Click</button>}
+
           options={{
-            toolbar: false,
-            pageSize: 10,
-            maxBodyHeight: "15rem",
-            minBodyHeight: "10rem",
-            // paging:false,
+            focusRow: true,
+            focusTimerInMilliSecond: 1000,
+            //default timer is of 800ms for having focus row focus
+            
           }}
           //for typescript onRowClick={(evt: any, rowClick: any) => console.log(rowClick, "selectedRow")}
           onRowClick={(evt, rowClick) => console.log(rowClick, "rowClicked")}

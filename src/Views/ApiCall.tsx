@@ -15,7 +15,8 @@ const PaginationApi = () => {
         },[])
 
         const apiCall =async(page, pageSize)=>{
-            // parameters  are just example for only api's which required pagination
+// Note parameters  are just example for only api's which
+// required pagination
             if(page ===2 ){ setStopScroll(true);}
            
             let url = "https://reqres.in/api/users?";
@@ -46,7 +47,7 @@ const PaginationApi = () => {
 
             options={{
                 paging: false,  
-               //paging should be always false when onScrollFetch is called
+  //Note paging should be always false when onScrollFetch is called
                
                maxBodyHeight: '18rem' ,
              //always give  height for scroll effect
@@ -60,10 +61,11 @@ const PaginationApi = () => {
                 //     color: '#FFF'
                 //   },
             }}
-            stopScrollFetch={stopScroll}  // for stoping scroll
-            stopScrollFetchText="You Reached to Bottom"
-                
-                onScrollFetch={(oldData) => new Promise((resolve, reject) => {
+          stopScrollFetch={stopScroll}  
+          //stopScrollFetch Must have boolean value for stoping scroll
+
+          stopScrollFetchText="You Reached to Bottom"                
+      onScrollFetch={(oldData) => new Promise((resolve, reject) => {
                     setTimeout(() => {
                         apiCall(2,6)
                         resolve();
@@ -76,26 +78,34 @@ const PaginationApi = () => {
     }`;
 
   return (
-    <Sandpack
-      // theme={theme}
-      template="react"
-      files={{
-        "/App.js": code,
-      }}
-      customSetup={{
-        dependencies: {
-          react: "18.0.0",
-          "react-dom": "18.0.0",
-          "react-scripts": "5.0.1",
-          "react-utility-table": "2.1.0",
-        },
-      }}
-      theme="dark"
-      options={{
-        showLineNumbers: true, // default - true
-        editorHeight: 500, // default - 300
-      }}
-    />
+    <div>
+      <p style={{ margin: "5px 0px" }}>
+        <strong>PlayGround for editable: </strong>
+        <br />
+        <br />
+      </p>
+
+      <Sandpack
+        // theme={theme}
+        template="react"
+        files={{
+          "/App.js": code,
+        }}
+        customSetup={{
+          dependencies: {
+            react: "18.0.0",
+            "react-dom": "18.0.0",
+            "react-scripts": "5.0.1",
+            "react-utility-table": "2.1.0",
+          },
+        }}
+        theme="dark"
+        options={{
+          showLineNumbers: true, // default - true
+          editorHeight: 500, // default - 300
+        }}
+      />
+    </div>
   );
 };
 

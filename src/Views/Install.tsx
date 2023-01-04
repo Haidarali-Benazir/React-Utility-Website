@@ -38,15 +38,16 @@ const Install = (props: any) => {
           <strong> data </strong> to the React-Utitlity-Table
         </p>
 
-        <Box sx={{ width: "100%" }}>
+       
           <Grid
             container
             rowSpacing={1}
             style={{justifyContent:"center"}}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            // columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            <Grid item xs={10} md={6}>
+            <Grid item xs={11} md={6}>
               <ReactUtilityTable
+              title={"Crud Operation"}
                 data={
                   hideData
                     ? mockData
@@ -107,7 +108,7 @@ const Install = (props: any) => {
                 }}
               />
             </Grid>
-            <Grid item xs={10} md={6}>
+            <Grid item xs={11} md={6}>
               <ReactUtilityTable
                 data={[
                   { first_name: "Dwayne", last_name: "Johnson", age: 48 },
@@ -144,7 +145,7 @@ const Install = (props: any) => {
               />
             </Grid>
           </Grid>
-        </Box>
+    
       </div>
     </>
   );

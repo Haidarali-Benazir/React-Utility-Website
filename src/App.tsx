@@ -15,6 +15,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ApiCall from "./Views/ApiCall";
 import PaginationApi from "./Views/PaginationApi";
 import CustomRender from "./Views/CustomRender";
+import KeyDownEvent from "./Views/KeyDownEvent";
 
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -106,6 +107,9 @@ const App = () => {
            <CustomRender />
           </TabPanel>
           <TabPanel value={value} index={10}>
+            <KeyDownEvent />        
+          </TabPanel>
+          <TabPanel value={value} index={11}>
             <Others />
           </TabPanel>
          
