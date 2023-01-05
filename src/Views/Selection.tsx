@@ -34,7 +34,6 @@ export default function App() {
           // selectAll:true,
           // selectionTitle:"Check All"
         }}
-        // for typescript onSelectionChange={(selectedRow: any) => console.log(selectedRow)}
         onSelectionChange={(selectedRow) => console.log(selectedRow)}
       />
     </div>

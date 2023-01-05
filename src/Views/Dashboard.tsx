@@ -11,7 +11,7 @@ const Dashboard = (props: any) => {
         <div style={{display: "flex", gap:"2rem", marginTop: "0.5rem"}}>
             <div className='imageindiv'>
               <p style={{ margin: "5px 0px", color: "#5c5454" }}>
-                This utility-table is built with <strong>React, HTML5, CSS3 </strong> and <strong>Typescript</strong>.
+                React Utility Table is built with <strong>React, HTML5, CSS3 </strong> and <strong>Typescript</strong>.
                 <br></br>
                 It allows all the <strong>CRUD operation</strong> to be done that a table must have features with <strong>Excel Download option and much more...</strong>.
               </p>

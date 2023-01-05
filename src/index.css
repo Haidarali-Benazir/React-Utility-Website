@@ -292,4 +292,7 @@ footer {
     .npm-logo-tag button {
         margin-right: 6px !important;
     }
+    .appbar {
+        gap: 0.2rem
+    }
 }

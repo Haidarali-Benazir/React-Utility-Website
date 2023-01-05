@@ -43,7 +43,7 @@ const Install = (props: any) => {
             container
             rowSpacing={1}
             style={{justifyContent:"center"}}
-            // columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             <Grid item xs={11} md={6}>
               <ReactUtilityTable
