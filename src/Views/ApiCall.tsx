@@ -16,8 +16,7 @@ const PaginationApi = () => {
 
         const apiCall =async(page, pageSize)=>{
 // Note parameters  are just example for only api's which
-// required pagination
-            if(page ===2 ){ setStopScroll(true);}
+// required pagination          
            
             let url = "https://reqres.in/api/users?";
             url += "per_page=" + pageSize;
@@ -25,9 +24,9 @@ const PaginationApi = () => {
             await fetch(url).then((response) => response.json())
               .then((result) => {         
                  setMockData([...mockData,...result.data]); 
-             
+                 if(page ===2 ){ setStopScroll(true);}
               });
-              
+            
         }
         
       return (

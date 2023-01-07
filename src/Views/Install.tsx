@@ -128,12 +128,13 @@ const Install = (props: any) => {
                   },
                 ]}
                 options={{
+                  // rowStyle: (rowData) => ({
+                  //   color: rowData["first_name"] === "John" ? "green" : "blue",
+                  // }),
                   pageSize: 3,
                   maxBodyHeight: "15rem",
                   minBodyHeight: "15rem",
-                  rowStyle: (rowData) => ({
-                    color: rowData.age === 20 ? "blue" : "black",
-                  }),
+                 
                   // headerStyle: {
                   //   backgroundColor: "rgb(92 33 217)",
                   //   color: "#FFF",

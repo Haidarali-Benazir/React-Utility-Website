@@ -24,7 +24,7 @@ import { ReactUtilityTable } from 'react-utility-table';
 
           options={{
             focusRow: true,
-            focusTimerInMilliSecond: 1000,
+            focusTimerInMilliSecond: 10000,
             //default timer is of 800ms for having focus row focus
             
           }}

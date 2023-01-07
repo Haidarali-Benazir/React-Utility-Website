@@ -8,9 +8,9 @@ const CustomRender = () => {
     export default function App() {
       const [mockData, setMockData] = React.useState([
         { first_name: "Dwayne", last_name: "Johnson", age: 48 },
-        { first_name: "John", last_name: "Cena", age: 46 },
+        { first_name: "John", last_name: "Cena", age: 45 },
         { first_name: "Randy", last_name: "Orton", age: 45 },
-        { first_name: "Roman", last_name: "Reign", age: 38 },
+        { first_name: "Roman", last_name: "Reign", age: 48 },
         { first_name: "Brock", last_name: "Lesnar", age: 50 },
         { first_name: "Roundy", last_name: "Rousey", age: 46 },
       ]);
@@ -41,6 +41,9 @@ const CustomRender = () => {
           ]}
           options={{
             pageSize: 4,
+            rowStyle: (rowData) => ({
+              color: rowData["age"] === 45 ? "green" : "blue",
+            }),
           }}
         />
       );
