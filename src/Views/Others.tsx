@@ -31,6 +31,7 @@ import { ReactUtilityTable } from 'react-utility-table';
             pageSize: 10,
             maxBodyHeight: "15rem",
             minBodyHeight: "10rem",
+            allBorder:true,
             // paging:false,
           }}
           //for typescript onRowClick={(evt: any, rowClick: any) => console.log(rowClick, "selectedRow")}

@@ -46,6 +46,8 @@ const PaginationApi = () => {
     <div>
       <p style={{ margin: "5px 0px" }}>
         <strong>PlayGround for editable: </strong>
+        <br />
+        <br />
       </p>
 
       <Sandpack

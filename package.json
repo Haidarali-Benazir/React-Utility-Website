@@ -2,6 +2,7 @@
     "name": "react-utilitytable-website",
     "version": "0.1.0",
     "private": true,
+    "author": "Haidarali and Benazir",
     "dependencies": {
         "@codesandbox/sandpack-react": "^1.18.4",
         "@emotion/react": "^11.9.0",

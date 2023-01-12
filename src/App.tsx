@@ -16,6 +16,7 @@ import ApiCall from "./Views/ApiCall";
 import PaginationApi from "./Views/PaginationApi";
 import CustomRender from "./Views/CustomRender";
 import KeyDownEvent from "./Views/KeyDownEvent";
+import FixedColumn from "./Views/FixedColumn";
 
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -110,6 +111,9 @@ const App = () => {
             <KeyDownEvent />        
           </TabPanel>
           <TabPanel value={value} index={11}>
+            <FixedColumn />        
+          </TabPanel>
+          <TabPanel value={value} index={12}>
             <Others />
           </TabPanel>
          

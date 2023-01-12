@@ -22,9 +22,10 @@ const PaginationApi = () => {
             url += "per_page=" + pageSize;
             url += "&page=" + page;
             await fetch(url).then((response) => response.json())
-              .then((result) => {         
+              .then((result) => {  
+                if(page >=2 ){ setStopScroll(true);}       
                  setMockData([...mockData,...result.data]); 
-                 if(page ===2 ){ setStopScroll(true);}
+                
               });
             
         }

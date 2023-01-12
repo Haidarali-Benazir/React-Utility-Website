@@ -34,7 +34,10 @@ const CustomRender = () => {
             {
              title: "Last Name",
              field: "last_name",
-         headRender: (title) => <input value={title} type="button" />,
+         headRender: (title) => <input value={title} type="button" 
+         onClick={() =>
+          alert("You click on " + title)
+           }/>,
             },
             { title: "Age", field: "age",
              sorter: (a, b) => a.age - b.age },

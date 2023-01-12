@@ -49,6 +49,7 @@ export default function Header(props: Props) {
           'API on Pagination',
           'Custom Render',
           "KeyDownEvent",
+          "Fixed Columns",
           "Other Feature",
           
         ].map((text, index) => (
