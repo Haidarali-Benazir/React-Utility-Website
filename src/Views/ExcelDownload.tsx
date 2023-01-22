@@ -1,15 +1,9 @@
-
-
-import React from 'react'
-import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
-import { ReactUtilityTable } from 'react-utility-table';
-import Layout from '../Components/Layout';
-import theme from 'prism-react-renderer/themes/nightOwl'
-import { Sandpack } from '@codesandbox/sandpack-react';
+import React from "react";
+import { Sandpack } from "@codesandbox/sandpack-react";
 
 
 export default function ExportExcel() {
-  const code =`import { ReactUtilityTable } from 'react-utility-table';
+  const code = `import { ReactUtilityTable } from 'react-utility-table';
   export default function App() {
     return (
       <div>
@@ -28,22 +22,28 @@ export default function ExportExcel() {
             },
           ]}
           columns={[
-            { title: "Name", field: "first_name" },
+            {
+              title: "Name",
+              field: "first_name",
+              excelValue: (rowData) => rowDat.first_name,
+//excelValue is for changing the value when excel file download and
+//default it is field of the column
+            },
             { title: "Last Name", field: "last_name" },
             { title: "Email", field: "email" },
           ]}
           options={{
             exportButton: true,
-            // exportFileName:"example"   default title is set
+            // exportFileName:"example"
+            // default excel file name is set as table title
           }}
         />
       </div>
     );
-  }`
+  }`;
 
   return (
     <>
-      
       <p style={{ margin: "5px 0px" }}>
         <strong>PlayGround for editable: </strong>
         <br />
@@ -60,7 +60,7 @@ export default function ExportExcel() {
             react: "18.0.0",
             "react-dom": "18.0.0",
             "react-scripts": "5.0.1",
-            "react-utility-table": "2.1.0",
+            "react-utility-table": "2.1.1",
           },
         }}
         theme="dark"
@@ -69,8 +69,8 @@ export default function ExportExcel() {
           editorHeight: 500, // default - 300
         }}
       />
-    
-{/* 
+
+      {/* 
       <LiveProvider code={code}
 
 
@@ -87,8 +87,6 @@ export default function ExportExcel() {
         />
       
       </LiveProvider> */}
-
-
     </>
-  )
+  );
 }

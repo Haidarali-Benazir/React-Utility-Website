@@ -12,6 +12,7 @@ import { ReactUtilityTable } from 'react-utility-table';
           data={ [
             { first_name: "John", last_name: "Cena", email: "JohnCena@gmail.com" },
             { first_name: "Randy", last_name: "Orton", email: "RandyOrton@gmail.com" },
+            { first_name: "Brock", last_name: "Lesnar", email: "brocklesnar@gmail.com" },
             { first_name: "Roman", last_name: "Reign", email: "RomanReign@gmail.com" },
           ]}
           columns={[
@@ -52,7 +53,7 @@ import { ReactUtilityTable } from 'react-utility-table';
             react: "18.0.0",
             "react-dom": "18.0.0",
             "react-scripts": "5.0.1",
-            "react-utility-table": "2.1.0",
+            "react-utility-table": "2.1.1",
           },
         }}
         theme="dark"

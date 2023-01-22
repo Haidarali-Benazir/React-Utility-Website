@@ -32,7 +32,8 @@ export default function App() {
           selection: true,
           disableSelectProps: (rowData) => rowData.first_name === "John",
           // selectAll:true,
-          // selectionTitle:"Check All"
+          // selectionTitle:"Select"  //can change select All from here
+
         }}
         onSelectionChange={(selectedRow) => console.log(selectedRow)}
       />
@@ -58,13 +59,14 @@ return (
           react: "18.0.0",
           "react-dom": "18.0.0",
           "react-scripts": "5.0.1",
-          "react-utility-table": "2.1.0",
+          "react-utility-table": "2.1.1",
         },
       }}
       theme="dark"
       options={{
         showLineNumbers: true, // default - true
         editorHeight: 500, // default - 300
+        editorWidthPercentage:45,
       }}
     />
   </>

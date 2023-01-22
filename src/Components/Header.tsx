@@ -45,7 +45,7 @@ export default function Header(props: Props) {
           "Selection",
           "Excel Download",
           "Summary",      
-          "Api on onScoll",
+          "API on onScoll",
           'API on Pagination',
           'Custom Render',
           "KeyDownEvent",

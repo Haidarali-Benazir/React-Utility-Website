@@ -65,7 +65,8 @@ const PaginationApi = () => {
           //stopScrollFetch Must have boolean value for stoping scroll
 
           stopScrollFetchText="You Reached to Bottom"                
-      onScrollFetch={(oldData) => new Promise((resolve, reject) => {
+        //  stopScrollFetchText={<button>Reach End</button>}     
+          onScrollFetch={(oldData) => new Promise((resolve, reject) => {
                     setTimeout(() => {
                         apiCall(2,6)
                         resolve();
@@ -96,7 +97,7 @@ const PaginationApi = () => {
             react: "18.0.0",
             "react-dom": "18.0.0",
             "react-scripts": "5.0.1",
-            "react-utility-table": "2.1.0",
+            "react-utility-table": "2.1.1",
           },
         }}
         theme="dark"
