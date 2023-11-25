@@ -60,7 +60,7 @@ code {
 .imageindiv {
     width: 100%;
     border-radius: 10px;
-    background: linear-gradient(to right, #ffffff, #fbf9ff);
+    /* background: linear-gradient(to right, #ffffff, #fbf9ff); */
     box-shadow: 0 2px 5px rgb(0 0 0 / 14%);
     color: #4c4c51;
     padding: 10px;
@@ -254,11 +254,23 @@ footer {
 
 .active {
     /* background-color: #fff !important; */
-    background: linear-gradient(to top, #eaecf1, #b9c4e1) !important;
+    /* background: linear-gradient(to top, #eaecf1, #b9c4e1) !important;
     color: rgb(94, 94, 95) !important;
-    border-radius: 5px !important;
+    border-radius: 5px !important; */
     /* border-bottom: 1px solid rgb(184, 182, 182); */
+    transition: 2s;
+    -webkit-box-shadow: 0 0 5px 2px #fff;
+    -moz-box-shadow: 0 0 5px 2px #fff;
+    box-shadow: 0 0 5px 2px #fff;
+    padding: 5px;
+    text-align: center;
+ 
 }
+
+.list-btn:focus:after { /* triggered when the accordion item is clicked/focused */
+    content : " ⚪";
+    text-align: center;
+  }
 
 .content {
     margin-left: 0px;
@@ -271,6 +283,12 @@ footer {
     margin-left: 5px;
 }
 
+.intro-landing-style{
+    display: flex;
+    gap:2rem;
+    margin-top: 0.5rem
+}
+
 @media (min-width: 600px) {
     .content {
         margin-left: 180px;
@@ -281,6 +299,12 @@ footer {
     .creator-name {
         padding: 2px;
         font-size: 11px;
+    }
+    .intro-landing-style{
+        display: flex;
+        gap:2rem;
+        margin-top: 0.5rem;
+        flex-direction: column;
     }
 }
 
