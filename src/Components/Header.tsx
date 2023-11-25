@@ -56,7 +56,7 @@ export default function Header(props: Props) {
           <ListItem key={text} disablePadding className={ selected === index ? "active": "list-bottom-border "}>
             <ListItemButton onClick={()=> handleMenuClick(index)} className="list-btn">
              
-              <ListItemText primary={text} className="list-text" />
+              <ListItemText primary={ selected ===index ? `⚪  ${text}` : text} className="list-text" />
             </ListItemButton>
           </ListItem>
         ))}

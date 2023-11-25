@@ -253,24 +253,12 @@ footer {
 }
 
 .active {
-    /* background-color: #fff !important; */
-    /* background: linear-gradient(to top, #eaecf1, #b9c4e1) !important;
-    color: rgb(94, 94, 95) !important;
-    border-radius: 5px !important; */
-    /* border-bottom: 1px solid rgb(184, 182, 182); */
-    transition: 2s;
-    -webkit-box-shadow: 0 0 5px 2px #fff;
-    -moz-box-shadow: 0 0 5px 2px #fff;
-    box-shadow: 0 0 5px 2px #fff;
+    transition: 0.5s;
+    box-shadow: 0 0 4px 2px #b0bfcc;
     padding: 5px;
     text-align: center;
  
 }
-
-.list-btn:focus:after { /* triggered when the accordion item is clicked/focused */
-    content : " ⚪";
-    text-align: center;
-  }
 
 .content {
     margin-left: 0px;
