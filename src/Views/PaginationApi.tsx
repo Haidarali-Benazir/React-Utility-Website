@@ -61,7 +61,7 @@ const PaginationApi = () => {
             react: "18.0.0",
             "react-dom": "18.0.0",
             "react-scripts": "5.0.1",
-            "react-utility-table": "2.1.1",
+            "react-utility-table": "2.1.4",
           },
         }}
         theme="dark"

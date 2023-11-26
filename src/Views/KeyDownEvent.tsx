@@ -25,8 +25,8 @@ import { ReactUtilityTable } from 'react-utility-table';
 
           options={{
             focusRow: true,
-            focusTimerInMilliSecond: 1000,
-            //default timer is of 800ms for having focus on row 
+            // focusTimerInMilliSecond: 1000,
+            //default timer is of 600ms for having focus on row 
             
           }}
           //for typescript onRowClick={(evt: any, rowClick: any) => console.log(rowClick, "selectedRow")}
@@ -53,7 +53,7 @@ import { ReactUtilityTable } from 'react-utility-table';
             react: "18.0.0",
             "react-dom": "18.0.0",
             "react-scripts": "5.0.1",
-            "react-utility-table": "2.1.1",
+            "react-utility-table": "2.1.4",
           },
         }}
         theme="dark"
