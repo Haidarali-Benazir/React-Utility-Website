@@ -7,8 +7,9 @@ const Dashboard = (props: any) => {
 
   return (
     <>
-        <div style={{display: "flex", gap:"2rem", marginTop: "0.5rem"}}>
+        <div className='intro-landing-style'>
             <div className='imageindiv'>
+              <h1> Introduction: </h1>
               <p style={{ margin: "5px 0px", color: "#5c5454" }}>
                 React Utility Table (<b>NPM package</b>) is built with <strong>React, HTML5, CSS3 </strong> and <strong>Typescript</strong>.
                 <br></br>
@@ -17,7 +18,7 @@ const Dashboard = (props: any) => {
             </div>
             <div className='imageindiv'>
               <p style={{ margin: "5px 0px", color: "#5c5454" }}>
-                <strong> Installation---  Getting Started! </strong>
+                <h2> Installation---  Getting Started! </h2>
                 <br></br>
                 Install this package : <a href="https://www.npmjs.com/package/react-utility-table" >npm i react-utility-table </a>
                 or <a href="https://www.npmjs.com/package/react-utility-table" >click here</a>

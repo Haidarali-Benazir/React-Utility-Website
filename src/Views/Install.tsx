@@ -33,8 +33,7 @@ const Install = (props: any) => {
     <>
       <div>
         <p style={{ margin: "10px 0px", color: "#5c5454" }}>
-          <strong>Basic example</strong> : Pass <strong>columns</strong> and{" "}
-          <strong> data </strong> to the React-Utitlity-Table
+          <h3>Basic example : Pass columns and data to the React-Utitlity-Table</h3>
         </p>
 
         <Grid
